@@ -10,16 +10,14 @@ public class WelcomeController {
     private String welcomeMessage;
 
     public WelcomeController(
-            @Value("Hello from test") String welcomeMessage)
+            @Value("${WELCOME_MESSAGE:NOT SET}") String welcomeMessage)
         {
             this.welcomeMessage = welcomeMessage;
         }
 
     @GetMapping("/")
     public String sayHello(){
-        //System.out.print("Test");
         return this.welcomeMessage;
-
     }
 
 }
