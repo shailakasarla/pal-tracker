@@ -1,7 +1,7 @@
 package test.pivotal.pal.tracker;
 
 import io.pivotal.pal.tracker.TimeEntry;
-import io.pivotal.pal.tracker.TimeEntryController;
+import io.pivotal.pal.tracker.InMemoryTimeEntryController;
 import io.pivotal.pal.tracker.TimeEntryRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,14 +17,14 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
-public class TimeEntryControllerTest {
+public class InMemoryInMemoryTimeEntryControllerTest {
     private TimeEntryRepository timeEntryRepository;
-    private TimeEntryController controller;
+    private InMemoryTimeEntryController controller;
 
     @Before
     public void setUp() throws Exception {
         timeEntryRepository = mock(TimeEntryRepository.class);
-        controller = new TimeEntryController(timeEntryRepository);
+        controller = new InMemoryTimeEntryController(timeEntryRepository);
     }
 
     @Test
