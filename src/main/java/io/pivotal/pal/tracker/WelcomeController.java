@@ -17,6 +17,7 @@ public class WelcomeController {
 
     @GetMapping("/")
     public String sayHello(){
+        //System.out.print("Test");
         return this.welcomeMessage;
 
     }
